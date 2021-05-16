@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Content from "../../utils/content.json";
 import ImgUrl from "../../Theme/images.json";
 import "./styleSheet.css";
 import { BtnLink } from "../../components/identicalFunc/index";
@@ -49,123 +48,123 @@ const GetStartedForm = (props) => {
 		<div className="getstartedBg">
 			<div className="container">
 				<div className="getStartedContent">
-					<h2>{Content.GetStartedTxt}</h2>
+					<h2>{this.props.Content.GetStartedTxt}</h2>
 					<form className="formBg">
 						<div className="qusBx">
-							<h6>{Content.ques1}</h6>
+							<h6>{this.props.Content.ques1}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput1(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques2}</h6>
+							<h6>{this.props.Content.ques2}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput2(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques3}</h6>
+							<h6>{this.props.Content.ques3}</h6>
 							<div className="button-wrap">
-								<label className="fileBtnbg" for="upload1" placeholder={Content.ChsFile}>{Content.ChsFile}</label>
+								<label className="fileBtnbg" for="upload1" placeholder={this.props.Content.ChsFile}>{this.props.Content.ChsFile}</label>
 								<input onChange={(inp) => getBase64(inp, setInput2File)} id="upload1" type="file" />
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques4}</h6>
+							<h6>{this.props.Content.ques4}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput3(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques5}</h6>
+							<h6>{this.props.Content.ques5}</h6>
 							<div className="button-wrap">
-								<label className="fileBtnbg" for="upload2" placeholder={Content.ChsFile}>{Content.ChsFile}</label>
+								<label className="fileBtnbg" for="upload2" placeholder={this.props.Content.ChsFile}>{this.props.Content.ChsFile}</label>
 								<input onChange={(inp) => getBase64(inp, setInput3File)} id="upload2" type="file" />
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques6}</h6>
+							<h6>{this.props.Content.ques6}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput4(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques7}</h6>
+							<h6>{this.props.Content.ques7}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput5(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques8}</h6>
+							<h6>{this.props.Content.ques8}</h6>
 							<div className="button-wrap">
-								<label className="fileBtnbg" for="upload3" placeholder={Content.ChsFile}>{Content.ChsFile}</label>
+								<label className="fileBtnbg" for="upload3" placeholder={this.props.Content.ChsFile}>{this.props.Content.ChsFile}</label>
 								<input onChange={(inp) => getBase64(inp, setInput5File)} id="upload3" type="file" />
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques9}</h6>
+							<h6>{this.props.Content.ques9}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput6(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques10}</h6>
+							<h6>{this.props.Content.ques10}</h6>
 							<div className="button-wrap">
-								<label className="fileBtnbg" for="upload4" placeholder={Content.ChsFile}>{Content.ChsFile}</label>
+								<label className="fileBtnbg" for="upload4" placeholder={this.props.Content.ChsFile}>{this.props.Content.ChsFile}</label>
 								<input onChange={(inp) => getBase64(inp, setInput6File)} id="upload4" type="file" />
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques11}</h6>
+							<h6>{this.props.Content.ques11}</h6>
 							<div className="form-group">
 								<select onChange={(inp) => setInput7(inp.target.value)} style={{ backgroundImage: `url(${ImgUrl.selectArw})` }} className="form-control">
-									<option value={Content.YsTxt}>{Content.YsTxt}</option>
-									<option value={Content.NoTxt}>{Content.NoTxt}</option>
+									<option value={this.props.Content.YsTxt}>{this.props.Content.YsTxt}</option>
+									<option value={this.props.Content.NoTxt}>{this.props.Content.NoTxt}</option>
 								</select>
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques12}</h6>
+							<h6>{this.props.Content.ques12}</h6>
 							<div className="button-wrap">
-								<label className="fileBtnbg" for="upload5" placeholder={Content.ChsFile}>{Content.ChsFile}</label>
+								<label className="fileBtnbg" for="upload5" placeholder={this.props.Content.ChsFile}>{this.props.Content.ChsFile}</label>
 								<input onChange={(inp) => getBase64(inp, setInput7File)} id="upload5" type="file" />
 							</div>
 						</div>
 
 						<div className="qusBx">
-							<h6>{Content.ques13}</h6>
+							<h6>{this.props.Content.ques13}</h6>
 							<div className="form-group">
 								<input onChange={(inp) => setInput8(inp.target.value)} type="text" className="form-control" placeholder="" />
 							</div>
 						</div>
 						<div className="qusBx">
-							<h6>{Content.ques14}</h6>
+							<h6>{this.props.Content.ques14}</h6>
 							<div className="button-wrap">
-								<label className="fileBtnbg" for="upload6" placeholder={Content.ChsFile}>{Content.ChsFile}</label>
+								<label className="fileBtnbg" for="upload6" placeholder={this.props.Content.ChsFile}>{this.props.Content.ChsFile}</label>
 								<input onChange={(inp) => getBase64(inp, setInput8File)} id="upload6" type="file" />
 							</div>
 						</div>
 						<div className="form-group">
-							<input onClick={submit} type="button" className="btn btn-submit" value={Content.SubFrProcess} />
-							{BtnLink(props.resPath, Content.ChkPrvResult)}
+							<input onClick={submit} type="button" className="btn btn-submit" value={this.props.Content.SubFrProcess} />
+							{BtnLink(props.resPath, this.props.Content.ChkPrvResult)}
 						</div>
 					</form>
 				</div>

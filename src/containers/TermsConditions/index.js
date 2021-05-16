@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/index";
 import Termsconditions from "../../components/termsconditions/index";
 import Footer from "../../components/footer/index";
-import Content from "../../utils/content.json";
 
 class TermsConditions extends React.Component {
   state = {};
   render() {
     return (
       <>
-          <Navbar menu={Menu()} />
-          <Termsconditions />
-          <Footer />
+          <Navbar menu={Menu(this.props)} Content={this.props.Content}/>
+          <Termsconditions Content={this.props.Content}/>
+          <Footer  Content={this.props.Content}/>
       </>
     );
   }
@@ -20,10 +19,10 @@ class TermsConditions extends React.Component {
 
 export default TermsConditions;
 
-function Menu() {
+function Menu(props) {
   return (
     <ul class="navbar-nav ml-auto">
-      {Content.homeMenuOpt.map((item) => Options(item))}
+      {props.Content.homeMenuOpt.map((item) => Options(item))}
     </ul>
   );
 }

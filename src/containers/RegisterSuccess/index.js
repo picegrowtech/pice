@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../components/navbar/index";
 import RegisterSuccessCnt from "../../components/registersuccesscontent/index";
 import Footer from "../../components/footer/index";
-import Content from "../../utils/content.json";
 import { Menu } from "../../components/identicalFunc/index";
 
 class RegisterSuccess extends React.Component {
@@ -11,9 +10,9 @@ class RegisterSuccess extends React.Component {
   render() {
     return (
       <>
-        <Navbar menu={Menu(Content.homeMenuOpt)} />
-        <RegisterSuccessCnt />
-        <Footer />
+        <Navbar menu={Menu(this.props.Content.homeMenuOpt)} Content={this.props.Content}/>
+        <RegisterSuccessCnt Content={this.props.Content}/>
+        <Footer  Content={this.props.Content}/>
       </>
     );
   }

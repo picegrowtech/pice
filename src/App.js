@@ -13,42 +13,58 @@ import { createBrowserHistory } from "history";
 import Content from "./utils/content.json";
 const history = createBrowserHistory();
 
-function App() {
-  return (
+class App extends React.Component {
+  state = {}
+  componentDidMount() {
+    fetch('http://localhost:5000/displayData')
+      .then(res => res.json())
+      .then(res => this.setState({ data:JSON.parse(res[0].data) }))
+      .then(json => console.log(json))
+  }
+  data=()=>{ return this.state.data}
+  appPages=()=>{
+    return(
     <div>
-      <Router history={history}>
-        <Switch>
-          <Route exact path={Content.homeMenuOpt[0].link}>
-            <Home />
-          </Route>
-          <Route exact path={Content.homeMenuOpt[1].link}>
-            <About />
-          </Route>
-          <Route exact path={Content.homeMenuOpt[2].link}>
-            <Login />
-          </Route>
-          <Route exact path={Content.homeMenuOpt[3].link}>
-            <Register />
-          </Route>
-          <Route exact path={Content.homeMenuOpt[4].link}>
-            <Dashboard />
-          </Route>
-          <Route exact path="/success">
-            <RegisterSuccess />
-          </Route>
-          <Route exact path="/terms-conditions">
-            <TermsConditions />
-          </Route>
-          <Route exact path="/privacy-policy">
-            <PrivacyPolicy />
-          </Route>
-          <Route exact path="/team-info">
-            <TeamInfo />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
+    <Router history={history}>
+      <Switch>
+        <Route exact path={this.state.data?.homeMenuOpt[0].link}>
+          <Home Content={this.state.data}/>
+        </Route>
+        <Route exact path={this.state.data?.homeMenuOpt[1].link}>
+          <About Content={this.state.data}/>
+        </Route>
+        <Route exact path={this.state.data?.homeMenuOpt[2].link}>
+          <Login Content={this.state.data}/>
+        </Route>
+        <Route exact path={this.state.data?.homeMenuOpt[3].link}>
+          <Register Content={this.state.data}/>
+        </Route>
+        <Route exact path={this.state.data?.homeMenuOpt[4].link}>
+          <Dashboard Content={this.state.data}/>
+        </Route>
+        <Route exact path="/success">
+          <RegisterSuccess Content={this.state.data}/>
+        </Route>
+        <Route exact path="/terms-conditions">
+          <TermsConditions Content={this.state.data}/>
+        </Route>
+        <Route exact path="/privacy-policy">
+          <PrivacyPolicy Content={this.state.data}/>
+        </Route>
+        <Route exact path="/team-info">
+          <TeamInfo Content={this.state.data}/>
+        </Route>
+      </Switch>
+    </Router>
+  </div>)
+  }
+  render() {
+    return (
+      this.state.data? this.appPages() : <div></div>
+    );
+  }
 }
 
 export default App;
+const val = App.state?.data?App.state.data:null
+export{val}

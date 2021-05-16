@@ -11,7 +11,6 @@ import * as selectors from "./selectors";
 import Navbar from "../../components/navbar/index";
 import RegisterContent from "../../components/registercontent/index";
 import Footer from "../../components/footer/index";
-import Content from "../../utils/content.json";
 import ImgUrl from "../../Theme/images.json";
 import { Menu } from "../../components/identicalFunc/index";
 
@@ -34,9 +33,9 @@ componentWillUnmount(){
         style={{ backgroundImage: `url(${ImgUrl.loginbg})` }}
       >
         {this.checkAuth()}
-        <Navbar menu={Menu(Content.homeMenuOpt)} />
-        <RegisterContent onSbmitReg={this.props.onSbmitReg}/>
-        <Footer />
+        <Navbar menu={Menu(this.props.Content.homeMenuOpt)} Content={this.props.Content} />
+        <RegisterContent onSbmitReg={this.props.onSbmitReg} Content={this.props.Content}/>
+        <Footer  Content={this.props.Content}/>
       </div>
     );
   }

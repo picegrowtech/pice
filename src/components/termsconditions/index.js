@@ -1,45 +1,44 @@
 import React from "react";
-import Content from "../../utils/content.json";
 import "./styleSheet.css";
-const TermsContent = () => {
+const TermsContent = (props) => {
   return (
     <div className="termsConditionsBg">
       <div className="container">
-      	<h2>{Content.TermsTitle}</h2>
-      	<h5>{Content.TermsIntro}</h5>
-      	<p>{Content.TermsWelcome}</p>
-      	<p>{Content.TermsCnt1}</p>
-      	<p>{Content.TermsCnt2}</p>
-		<p>{Content.TermsCnt3}</p>
-		<p>{Content.TermsCnt4}</p>
+      	<h2>{props.Content.TermsTitle}</h2>
+      	<h5>{props.Content.TermsIntro}</h5>
+      	<p>{props.Content.TermsWelcome}</p>
+      	<p>{props.Content.TermsCnt1}</p>
+      	<p>{props.Content.TermsCnt2}</p>
+		<p>{props.Content.TermsCnt3}</p>
+		<p>{props.Content.TermsCnt4}</p>
       
-      <h5>{Content.TermsTitle2}</h5>
-	  <p>{Content.TermsCnt21}</p>
+      <h5>{props.Content.TermsTitle2}</h5>
+	  <p>{props.Content.TermsCnt21}</p>
 
-	  <h5>{Content.TermsTitle3}</h5>
-	  <p>{Content.TermsCnt31}</p>
-	  <p>{Content.TermsCnt32}</p>
-	  <p>{Content.TermsCnt33}</p>
-	  <p>{Content.TermsCnt34}</p>
-	  <p>{Content.TermsCnt35}</p>
-	  <p>{Content.TermsCnt36}</p>
+	  <h5>{props.Content.TermsTitle3}</h5>
+	  <p>{props.Content.TermsCnt31}</p>
+	  <p>{props.Content.TermsCnt32}</p>
+	  <p>{props.Content.TermsCnt33}</p>
+	  <p>{props.Content.TermsCnt34}</p>
+	  <p>{props.Content.TermsCnt35}</p>
+	  <p>{props.Content.TermsCnt36}</p>
 
-	  <h5>{Content.TermsTitle4}</h5>
-	  <p>{Content.TermsCnt41}</p>
-	  <p>{Content.TermsCnt42}</p>
-	  <p>{Content.TermsCnt43}</p>
-	  <p>{Content.TermsCnt44}</p>
-	  <p>{Content.TermsCnt45}</p>
-	  <p>{Content.TermsCnt46}</p>
+	  <h5>{props.Content.TermsTitle4}</h5>
+	  <p>{props.Content.TermsCnt41}</p>
+	  <p>{props.Content.TermsCnt42}</p>
+	  <p>{props.Content.TermsCnt43}</p>
+	  <p>{props.Content.TermsCnt44}</p>
+	  <p>{props.Content.TermsCnt45}</p>
+	  <p>{props.Content.TermsCnt46}</p>
 
-	  <h5>{Content.TermsTitle5}</h5>
-	  <p>{Content.TermsCnt51}</p>
+	  <h5>{props.Content.TermsTitle5}</h5>
+	  <p>{props.Content.TermsCnt51}</p>
 
-	  <h5>{Content.TermsTitle6}</h5>
-	  <p>{Content.TermsCnt61}</p>
+	  <h5>{props.Content.TermsTitle6}</h5>
+	  <p>{props.Content.TermsCnt61}</p>
 
-	  <h5>{Content.TermsTitle7}</h5>
-	  <p>{Content.TermsCnt71}</p>
+	  <h5>{props.Content.TermsTitle7}</h5>
+	  <p>{props.Content.TermsCnt71}</p>
       </div>
     </div> 
   );

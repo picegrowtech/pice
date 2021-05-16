@@ -1,10 +1,9 @@
 import React from "react";
-import Content from "../../utils/content.json";
 import "./styleSheet.css";
-const InnerpgeBanner = () => {
+const InnerpgeBanner = (props) => {
   return (
     <div className="aboutBg">
-      <div className="container"><h2>{Content.aboutUsTxt}</h2></div>
+      <div className="container"><h2>{props.Content.aboutUsTxt}</h2></div>
     </div> 
   );
 };

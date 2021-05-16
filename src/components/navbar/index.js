@@ -1,14 +1,13 @@
 import React from "react";
 import "./styleSheet.css";
 import ImgUrl from "../../Theme/images.json";
-import Content from "../../utils/content.json";
 const Navbar = (props) => {
   return (
     <div>
       <header>
         <div className="header">
-          <a className="logo" href="/" title={Content.WebsiteTitle}>
-            <img src={ImgUrl.logo} alt={Content.WebsiteTitle} />
+          <a className="logo" href="/" title={props.Content.WebsiteTitle}>
+            <img src={ImgUrl.logo} alt={props.Content.WebsiteTitle} />
           </a>
           <nav className="navbar navbar-dark navbar-expand-md">
             <button

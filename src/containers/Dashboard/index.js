@@ -38,18 +38,20 @@ class Dashboard extends React.Component {
             <span class="navbar-toggler-icon"></span>
           </button>
         </nav>
-        <Navbar menu={Menu()} />
+        <Navbar menu={Menu()} Content={this.props.Content}/>
         <div className="dashboardCntBg">
-          <DashboardSidebar />
+          <DashboardSidebar Content={this.props.Content}/>
           <div className="dashbrdRight">
             <Switch>
               <Route exact path={`${this.props.match.path}`}>
                 <DashboardDfltCnt
+                Content={this.props.Content}
                   gtStrFrmPath={`${this.props.match.path}/get-started`}
                 />
               </Route>
               <Route path={`${this.props.match.path}/get-started`}>
                 <GetStartedForm
+                Content={this.props.Content}
                   resPath={`${this.props.match.path}/results`}
                   onSbmitGetStrtFrm={(e) =>
                     this.props.onSbmitGetStrtFrm(e, "PICE")
@@ -57,10 +59,10 @@ class Dashboard extends React.Component {
                 />
               </Route>
               <Route path={`${this.props.match.path}/results`}>
-                <ResultsContent />
+                <ResultsContent Content={this.props.Content}/>
               </Route>
             </Switch>
-            <Footer />
+            <Footer  Content={this.props.Content}/>
           </div>
         </div>
       </div>

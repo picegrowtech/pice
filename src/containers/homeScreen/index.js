@@ -13,20 +13,22 @@ import HomeContent from "../../components/homecontent/index";
 import SupportConferences from "../../components/supportedconferences/index";
 import HomeCsraFeatures from "../../components/homecsrafeatures/index";
 import Footer from "../../components/footer/index";
-import Content from "../../utils/content.json";
 import { Menu } from "../../components/identicalFunc/index";
-
+import {val} from "../../App"
+import Model from '../../components/model'
 class HomeScreen extends React.Component {
   state = {};
   render() {
     return (
       <>
-        <Navbar menu={Menu(Content.homeMenuOpt)} />
-        <HomeBanner />
-        <HomeContent />
-        <SupportConferences />
-        <HomeCsraFeatures />
-        <Footer />
+      {console.log(val)}
+        <Navbar menu={Menu(this.props.Content.homeMenuOpt)} Content={this.props.Content}/>
+        <Model  Content={this.props.Content}/>
+        <HomeBanner Content={this.props.Content}/>
+        <HomeContent  Content={this.props.Content}/>
+        <SupportConferences  Content={this.props.Content}/>
+        <HomeCsraFeatures  Content={this.props.Content}/>
+        <Footer  Content={this.props.Content}/>
       </>
     );
   }

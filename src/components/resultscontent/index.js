@@ -1,5 +1,4 @@
 import React from "react";
-import Content from "../../utils/content.json";
 import ImgUrl from "../../Theme/images.json";
 import "./styleSheet.css";
 const resultsContent = () => {
@@ -7,36 +6,36 @@ const resultsContent = () => {
     <div className="resultCntBg">
     	<div className="container">
     		<div className="resultCnt">
-    		<h3>{Content.ResultsTxt}</h3>
+    		<h3>{this.props.Content.ResultsTxt}</h3>
 	    		<div className="resultTable table-responsive">
 	    			<table>
 		    			<tr>
-		    				<th>{Content.resultsTitle}</th>
-		    				<th>{Content.DnloadTxt}</th>
+		    				<th>{this.props.Content.resultsTitle}</th>
+		    				<th>{this.props.Content.DnloadTxt}</th>
 		    			</tr>
 		    			<tr>
-		    				<td>{Content.TopReviewers}</td>
-		    				<td><a className="btn" href="#">{Content.DwnloadCSV}</a></td>
+		    				<td>{this.props.Content.TopReviewers}</td>
+		    				<td><a className="btn" href="#">{this.props.Content.DwnloadCSV}</a></td>
 		    			</tr>
 		    			<tr>
-		    				<td>{Content.FinalAssingment}</td>
-		    				<td><a className="btn" href="#">{Content.DwnloadCSV}</a></td>
+		    				<td>{this.props.Content.FinalAssingment}</td>
+		    				<td><a className="btn" href="#">{this.props.Content.DwnloadCSV}</a></td>
 		    			</tr>
 		    			<tr>
-		    				<td>{Content.MissingReviews}</td>
-		    				<td><a className="btn" href="#">{Content.DwnloadCSV}</a></td>
+		    				<td>{this.props.Content.MissingReviews}</td>
+		    				<td><a className="btn" href="#">{this.props.Content.DwnloadCSV}</a></td>
 		    			</tr>
 		    			<tr>
-		    				<td>{Content.RelevantPapers}</td>
-		    				<td><a className="btn" href="#">{Content.DwnloadCSV}</a></td>
+		    				<td>{this.props.Content.RelevantPapers}</td>
+		    				<td><a className="btn" href="#">{this.props.Content.DwnloadCSV}</a></td>
 		    			</tr>
 		    			<tr>
-		    				<td>{Content.coiname}</td>
-		    				<td><a className="btn" href="#">{Content.DwnloadCSV}</a></td>
+		    				<td>{this.props.Content.coiname}</td>
+		    				<td><a className="btn" href="#">{this.props.Content.DwnloadCSV}</a></td>
 		    			</tr>
 		    			<tr>
-		    				<td>{Content.SourceofCnflict}</td>
-		    				<td><a className="btn" href="#">{Content.DwnloadCSV}</a></td>
+		    				<td>{this.props.Content.SourceofCnflict}</td>
+		    				<td><a className="btn" href="#">{this.props.Content.DwnloadCSV}</a></td>
 		    			</tr>
 		    		</table>
 	    		</div>

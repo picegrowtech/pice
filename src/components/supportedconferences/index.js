@@ -1,11 +1,10 @@
 import Slider from "react-slick";
 import "./slick.css";
-import Content from "../../utils/content.json";
 import ImgUrl from "../../Theme/images.json";
 
 import "./styleSheet.css";
 
-const SupportConferences = () => {
+const SupportConferences = (props) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -39,32 +38,32 @@ const SupportConferences = () => {
       <div className="container">
         <div className="row">
           <div className="support_confs_cnt">
-            <h3>{Content.supportconfTitle}</h3>
+            <h3>{props.Content.supportconfTitle}</h3>
             <Slider className="support_confs_slider" {...settings}>
               <div>
                 <img src={ImgUrl.supportconfMicroimg} alt="" />
-                <h5>{Content.supportconfMicro}</h5>
-                <p>{Content.supportconfYr2019}</p>
+                <h5>{props.Content.supportconfMicro}</h5>
+                <p>{props.Content.supportconfYr2019}</p>
               </div>
               <div>
                 <img src={ImgUrl.supportconfHpcaimg} alt="" />
-                <h5>{Content.supportconfHpca}</h5>
-                <p>{Content.supportconfYr2019}</p>
+                <h5>{props.Content.supportconfHpca}</h5>
+                <p>{props.Content.supportconfYr2019}</p>
               </div>
               <div>
                 <img src={ImgUrl.supportconfIscaimg} alt="" />
-                <h5>{Content.supportconfIsca}</h5>
-                <p>{Content.supportconfYr2019}</p>
+                <h5>{props.Content.supportconfIsca}</h5>
+                <p>{props.Content.supportconfYr2019}</p>
               </div>
               <div>
                 <img src={ImgUrl.supportconfMicroimg} alt="" />
-                <h5>{Content.supportconfMicro}</h5>
-                <p>{Content.supportconfYr2020}</p>
+                <h5>{props.Content.supportconfMicro}</h5>
+                <p>{props.Content.supportconfYr2020}</p>
               </div>
               <div>
                 <img src={ImgUrl.supportconfIscaimg} alt="" />
-                <h5>{Content.supportconfIsca}</h5>
-                <p>{Content.supportconfYr2020}</p>
+                <h5>{props.Content.supportconfIsca}</h5>
+                <p>{props.Content.supportconfYr2020}</p>
               </div>
             </Slider>
           </div>

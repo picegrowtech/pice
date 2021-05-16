@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../components/navbar/index";
 import InnerpgeBanner from "../../components/innerpgebanner/index";
 import Footer from "../../components/footer/index";
-import Content from "../../utils/content.json";
 import { Menu } from "../../components/identicalFunc/index";
 import ImgUrl from "../../Theme/images.json";
 
@@ -12,12 +11,12 @@ class AboutUs extends React.Component {
   render() {
     return (
       <>
-        <Navbar menu={Menu(Content.homeMenuOpt)} />
-        <InnerpgeBanner />
+        <Navbar menu={Menu(this.props.Content.homeMenuOpt)} Content={this.props.Content}/>
+        <InnerpgeBanner  Content={this.props.Content}/>
         <div className="aboutContentbg">
           <div className="container">
             <div className="teamContentSection">
-              <h4>{Content.teamLeadTxt}</h4>
+              <h4>{this.props.Content.teamLeadTxt}</h4>
               <div className="teamMemSection">
                 <div className="teamMemBox">
                   <img
@@ -25,12 +24,12 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtOmrAnj}</h5>
-                  <h6>{Content.AbtPrjctTle}</h6>
-                  <a href={Content.AbtOmrMail}>{Content.AbtOmrMail}</a>
+                  <h5>{this.props.Content.AbtOmrAnj}</h5>
+                  <h6>{this.props.Content.AbtPrjctTle}</h6>
+                  <a href={this.props.Content.AbtOmrMail}>{this.props.Content.AbtOmrMail}</a>
                 </div>
               </div>
-              <h4>{Content.AbtTeam}</h4>
+              <h4>{this.props.Content.AbtTeam}</h4>
               <div className="teamMemSection">
                 <div className="teamMemBox">
                   <img
@@ -38,8 +37,8 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtHgyuGng}</h5>
-                  <h6>{Content.AbtPrjctTle}</h6>
+                  <h5>{this.props.Content.AbtHgyuGng}</h5>
+                  <h6>{this.props.Content.AbtPrjctTle}</h6>
                 </div>
                 <div className="teamMemBox">
                   <img
@@ -47,8 +46,8 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtXinZu}</h5>
-                  <h6>{Content.AbtPrjctTle}</h6>
+                  <h5>{this.props.Content.AbtXinZu}</h5>
+                  <h6>{this.props.Content.AbtPrjctTle}</h6>
                 </div>
                 <div className="teamMemBox">
                   <img
@@ -56,8 +55,8 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtJiaWu}</h5>
-                  <h6>{Content.AbtPrjctTle}</h6>
+                  <h5>{this.props.Content.AbtJiaWu}</h5>
+                  <h6>{this.props.Content.AbtPrjctTle}</h6>
                 </div>
                 <div className="teamMemBox">
                   <img
@@ -65,11 +64,11 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtAlkKmtar}</h5>
-                  <h6>{Content.AbtPrjctTle}</h6>
+                  <h5>{this.props.Content.AbtAlkKmtar}</h5>
+                  <h6>{this.props.Content.AbtPrjctTle}</h6>
                 </div>
               </div>
-              <h4>{Content.AbtAdvsrs}</h4>
+              <h4>{this.props.Content.AbtAdvsrs}</h4>
               <div className="teamMemSection">
                 <div className="teamMemBox">
                   <img
@@ -77,8 +76,8 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtWnmiHwa}</h5>
-                  <h6>{Content.AbtPrjctTle}</h6>
+                  <h5>{this.props.Content.AbtWnmiHwa}</h5>
+                  <h6>{this.props.Content.AbtPrjctTle}</h6>
                 </div>
                 <div className="teamMemBox">
                   <img
@@ -86,11 +85,11 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtJinjun}</h5>
-                  <h6>{Content.Abtibm}</h6>
+                  <h5>{this.props.Content.AbtJinjun}</h5>
+                  <h6>{this.props.Content.Abtibm}</h6>
                 </div>
               </div>
-              <h4>{Content.AbtClbratrs}</h4>
+              <h4>{this.props.Content.AbtClbratrs}</h4>
               <div className="teamMemSection">
                 <div className="teamMemBox">
                   <img
@@ -98,14 +97,14 @@ class AboutUs extends React.Component {
                     class="img-thumbnail rounded-circle"
                     alt=""
                   />
-                  <h5>{Content.AbtQianNg}</h5>
-                  <h6 className="text-capitalize">{Content.AbtInsforAI}</h6>
+                  <h5>{this.props.Content.AbtQianNg}</h5>
+                  <h6 className="text-capitalize">{this.props.Content.AbtInsforAI}</h6>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer  Content={this.props.Content}/>
       </>
     );
   }

@@ -1,8 +1,7 @@
 import React from "react";
-import Content from "../../utils/content.json";
 import ImgUrl from "../../Theme/images.json";
 import "./styleSheet.css";
-const HomeContent = () => {
+const HomeContent = (props) => {
   return (
     <section className="content_bg">
       <div className="container">
@@ -13,8 +12,8 @@ const HomeContent = () => {
             </div>
             <div className="col-12 col-sm-6 right_content">
               <div className="content_box">
-                <h4>{Content.homeContentTitle}</h4>
-                <p>{Content.homeContent}</p>
+                <h4>{props.Content.homeContentTitle}</h4>
+                <p>{props.Content.homeContent}</p>
               </div>
             </div>
           </div>

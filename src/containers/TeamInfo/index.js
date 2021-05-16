@@ -25,12 +25,12 @@ class TeamInfo extends React.Component {
               <span class="navbar-toggler-icon"></span>
             </button>
           </nav>
-          <Navbar menu={Menu()} />
+          <Navbar menu={Menu()} Content={this.props.Content}/>
           <div className="dashboardCntBg">
-            <DashboardSidebar />
+            <DashboardSidebar Content={this.props.Content}/>
             <div className="dashbrdRight">
-              <TeamInfoContent />
-              <Footer />
+              <TeamInfoContent Content={this.props.Content}/>
+              <Footer  Content={this.props.Content}/>
             </div>
           </div>
         </div>

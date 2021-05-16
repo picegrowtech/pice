@@ -10,7 +10,6 @@ import * as actions from "./actions";
 import * as selectors from "./selectors";
 import Navbar from "../../components/navbar/index";
 import Footer from "../../components/footer/index";
-import Content from "../../utils/content.json";
 import ImgUrl from "../../Theme/images.json";
 import LoginContent from "../../components/logincontent/index";
 import { Menu } from "../../components/identicalFunc/index";
@@ -35,9 +34,9 @@ class Login extends React.Component {
         style={{ backgroundImage: `url(${ImgUrl.loginbg})` }}
       >
         {this.checkAuth()}
-        <Navbar menu={Menu(Content.homeMenuOpt)} />
-        <LoginContent onSbmitLogin={this.props.onSbmitLogin}/>
-        <Footer />
+        <Navbar menu={Menu(this.props.Content.homeMenuOpt)} Content={this.props.Content}/>
+        <LoginContent onSbmitLogin={this.props.onSbmitLogin} Content={this.props.Content}/>
+        <Footer  Content={this.props.Content}/>
       </div>
     );
   }
