@@ -34,13 +34,10 @@ class App extends React.Component {
           <About Content={this.state.data}/>
         </Route>
         <Route exact path={this.state.data?.homeMenuOpt[2].link}>
-          <Login Content={this.state.data}/>
+          <Dashboard Content={this.state.data}/>
         </Route>
         <Route exact path={this.state.data?.homeMenuOpt[3].link}>
-          <Register Content={this.state.data}/>
-        </Route>
-        <Route exact path={this.state.data?.homeMenuOpt[4].link}>
-          <Dashboard Content={this.state.data}/>
+          <Login Content={this.state.data}/>
         </Route>
         <Route exact path="/success">
           <RegisterSuccess Content={this.state.data}/>
